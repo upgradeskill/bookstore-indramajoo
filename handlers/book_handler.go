@@ -64,7 +64,7 @@ func (bookHandler *BookHandler) Update(c echo.Context) error {
 		return errUpdate
 	}
 
-	return c.JSON(http.StatusOK, book)
+	return c.JSON(http.StatusOK, bookUpdate)
 }
 
 func (bookHandler *BookHandler) Delete(c echo.Context) error {
