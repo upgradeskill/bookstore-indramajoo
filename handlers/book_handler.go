@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"context"
-	"fmt"
 	"myapp/core/models"
 	"myapp/core/ports"
 	"net/http"
@@ -78,8 +77,6 @@ func (bookHandler *BookHandler) Delete(c echo.Context) error {
 		c.JSON(http.StatusNotFound, map[string]string{"error": "Data Not Found"})
 		return err
 	}
-
-	fmt.Println(book)
 
 	errDelete := bookHandler.bookService.Delete(ctx, &book)
 	if errDelete != nil {
