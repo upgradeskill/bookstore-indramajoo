@@ -1,0 +1,5 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'c:/majoo/myapp'
+go run server.go
+make: Leaving directory 'c:/majoo/myapp'
+ 
